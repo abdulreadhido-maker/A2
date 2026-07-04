@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل الإرشادي | مركز المساعدة والتعليمات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .instructions-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .center-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        /* خطوات الشراء */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .step-card {
+            background: #fff;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #007bff;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        /* نظام الأكورديون للأسئلة الشائعة */
+        .faq-section {
+            background: #fff;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: bold;
+            color: #23272e;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            margin-top: 10px;
+            color: #555;
+            line-height: 1.6;
+            display: none; /* مخفي افتراضياً ويفتح بالجافا سكريبت */
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        .faq-toggle {
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="instructions-container">
+        <header class="center-header">
+            <h1>مركز المساعدة والإرشادات 🎯</h1>
+            <p>كل ما تحتاجه لمعرفة طريقة الشراء، تحميل الملفات، وتفعيل الرخص البرمجية</p>
+        </header>
+
+        <!-- خطوات الشراء الثلاثة السريعة -->
+        <section>
+            <h2 style="margin-bottom: 25px;">كيف تشتري وتستلم منتجك؟</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>اختر منتجك</h4>
+                    <p style="font-size: 14px; color: #666;">تصفح المتجر أو صفحات المطورين والتصميم واضف خيارك للسلة.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>ادفع بأمان</h4>
+                    <p style="font-size: 14px; color: #666;">أدخل بريدك الإلكتروني المفعل وادفع فوراً عبر ممدى، فيزا أو Apple Pay.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>التحميل الفوري</h4>
+                    <p style="font-size: 14px; color: #666;">سيتم توجيهك للوحة التحكم لبدء التحميل فوراً، وستصلك نسخة لبريدك.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الأسئلة الشائعة التفاعلي -->
+        <section class="faq-section">
+            <h2 style="margin-top: 0; margin-bottom: 20px;">الأسئلة الشائعة (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل الكود المرفق في قوالب المطورين قابل للتعديل بالكامل؟</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    نعم، جميع الأكواد المبيعة عبر منصتنا تأتي بتوثيق كامل وكود نظيف 100%، يمكنك تعديل الألوان، البنية البرمجية، وإعادة تهيئتها بما يناسب مشروعك الخاص.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>كيف يمكنني الوصول للكورسات التي قمت بشرائها؟</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    بمجرد إتمام الدفع، توجه مباشرة إلى "لوحة تحكم العميل" (Dashboard)، ستجد كارت خاص بالكورس يحتوي على زر "متابعة المشاهدة" لينقلك لمشغل الفيديو فوراً دون أي انتظار.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ما هو الفرق بين الرخصة الشخصية والتجارية في صفحات المنتج؟</span>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    الرخصة الشخصية تمنحك الحق في استخدام القالب أو الأداة في مشروع واحد ثابت خاص بك، بينما الرخصة التجارية تتيح لك استخدامه في مشاريع متعددة وإعادة بيعه لعملائك كجزء من خدماتك البرمجية أو التصميمية.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- جافا سكريبت تفاعلي للأكورديون -->
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                
+                // إغلاق أي سؤال آخر مفتوح لراحة المستخدم (اختياري)
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    if (i !== item) i.classList.remove('active');
+                });
+
+                // فتح أو إغلاق السؤال الحالي
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
