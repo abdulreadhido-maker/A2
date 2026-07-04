@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الشراء السريع | الدفع الآمن</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .checkout-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+        }
+        .billing-form, .order-summary {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #e1e1e1;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #eee;
+        }
+        .total-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .btn-submit-order {
+            background: #28a745;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .btn-submit-order:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="text-align: center; padding: 20px; background: #f8f9fa; border-bottom: 1px solid #eee;">
+        <h2>إتمام عملية الشراء 🔒</h2>
+        <p>بياناتك مشفرة وآمنة بنسبة 100%</p>
+    </header>
+
+    <main class="checkout-container">
+        <section class="billing-form">
+            <h3>1. بيانات العميل والدفع</h3>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="full-name">الاسم الكامل:</label>
+                    <input type="text" id="full-name" required placeholder="محمد أحمد">
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني (لتلقي رابط التحميل/الكورس):</label>
+                    <input type="email" id="email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">طريقة الدفع الفوري:</label>
+                    <select id="payment-method">
+                        <option value="mada">بطاقة مدى (Mada)</option>
+                        <option value="credit">بطاقة ائتمانية (Visa / MasterCard)</option>
+                        <option value="apple">Apple Pay</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit-order">تأكيد الدفع والتحميل الفوري 🚀</button>
+            </form>
+        </section>
+
+        <section class="order-summary">
+            <h3>2. ملخص الطلب</h3>
+            <div id="summary-items-container">
+                <div class="summary-item">
+                    <span>قالب نظام إدارة البيانات (رخصة شخصية)</span>
+                    <strong>49 $</strong>
+                </div>
+            </div>
+            <div class="summary-item" style="border: none; margin-top: 20px;">
+                <span class="total-price">المجموع الإجمالي:</span>
+                <span class="total-price" id="total-amount">49 $</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>
