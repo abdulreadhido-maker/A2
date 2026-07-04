@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتجر الذكي | تصفح المنتجات والأدوات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* تنسيقات سريعة للمتجر لتنظيم العرض */
+        .shop-container {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sidebar-filters {
+            width: 25%;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+        .products-grid {
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            background: #fff;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .btn-add-cart {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="text-align: center; padding: 20px; background: #f1f1f1;">
+        <h1>المتجر الرقمي 🛒</h1>
+        <p>ابحث عن الكورسات، القوالب، والأدوات البرمجية المناسبة لك</p>
+    </header>
+
+    <div class="shop-container">
+        <aside class="sidebar-filters">
+            <h3>تصفية المنتجات</h3>
+            <hr>
+            
+            <div class="filter-group">
+                <label for="category-filter">القسم:</label>
+                <select id="category-filter" style="width: 100%; padding: 8px;">
+                    <option value="all">كل الأقسام</option>
+                    <option value="dev">أدوات المطورين (Dev)</option>
+                    <option value="uiux">تصميم واجهات (UI/UX)</option>
+                    <option value="courses">كورسات تعليمية</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="price-filter">الحد الأقصى للسعر: (<span id="price-val">200</span>$)</label>
+                <input type="range" id="price-filter" min="0" max="200" value="200" style="width: 100%;">
+            </div>
+        </aside>
+
+        <main class="products-grid" id="products-container">
+            </main>
+    </div>
+
+    <script src="js/shop.js"></script>
+</body>
+</html>
