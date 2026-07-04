@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأكاديمية الرقمية | الكورسات والمسارات المتاحة</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .courses-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .academy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .course-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #eef0f2;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .course-banner {
+            position: relative;
+            height: 180px;
+            background: #e9ecef;
+        }
+        .course-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .badge-level {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(35, 39, 46, 0.9);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .course-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .course-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #6c757d;
+            margin: 10px 0 15px 0;
+        }
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid #f8f9fa;
+        }
+        .btn-enroll {
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="courses-container">
+        <header class="academy-header">
+            <h1>المسارات التعليمية والكورسات 🎓</h1>
+            <p>استثمر في مهاراتك وانتقل بمستواك المهني إلى الاحترافية مع تطبيق عملي كامل</p>
+        </header>
+
+        <main class="courses-grid">
+            <article class="course-card">
+                <div class="course-banner">
+                    <img src="https://via.placeholder.com/350x180/23272e/ffffff?text=Full-Stack+JavaScript" alt="كورس تطوير الويب">
+                    <span class="badge-level">متوسط إلى متقدم</span>
+                </div>
+                <div class="course-body">
+                    <h3>معسكر Full-Stack JavaScript المتكامل</h3>
+                    <div class="course-meta">
+                        <span>⏱️ 45 ساعة تدريبية</span>
+                        <span>📜 شهادة إتمام</span>
+                    </div>
+                    <p style="color: #495057; font-size: 14px; line-height: 1.6; margin: 0 0 20px 0;">
+                        تعلم بناء مشاريع حقيقية من الصفر باستخدام Node.js, Express, و React مع ربط قواعد البيانات وضمان الأمان والتوسعية.
+                    </p>
+                    <div class="course-footer">
+                        <span style="font-weight: bold; color: #007bff; font-size: 20px;">99 $</span>
+                        <a href="checkout.html" class="btn-enroll">ابدأ التعلم الآن 🚀</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-banner">
+                    <img src="https://via.placeholder.com/350x180/007bff/ffffff?text=UI/UX+Fundamentals" alt="كورس التصميم">
+                    <span class="badge-level">مبتدئ</span>
+                </div>
+                <div class="course-body">
+                    <h3>أساسيات وتجربة المستخدم لغير المصممين</h3>
+                    <div class="course-meta">
+                        <span>⏱️ 18 ساعة تدريبية</span>
+                        <span>📜 شهادة إتمام</span>
+                    </div>
+                    <p style="color: #495057; font-size: 14px; line-height: 1.6; margin: 0 0 20px 0;">
+                        افهم عقلية العميل وسلوك المستخدم، وتعلم كيفية بناء هياكل سلكية (Wireframes) واختبار واجهاتك قبل برمجتها.
+                    </p>
+                    <div class="course-footer">
+                        <span style="font-weight: bold; color: #007bff; font-size: 20px;">49 $</span>
+                        <a href="checkout.html" class="btn-enroll">ابدأ التعلم الآن 🚀</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+</body>
+</html>
