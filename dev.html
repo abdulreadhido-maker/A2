@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باقات المطورين والأدوات البرمجية | Dev Tools</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .dev-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+        .pricing-card {
+            background: #fff;
+            border: 1px solid #e1e1e1;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .pricing-card.featured {
+            border: 2px solid #007bff;
+            box-shadow: 0 5px 15px rgba(0,123,255,0.15);
+        }
+        .badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #007bff;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #23272e;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: right;
+        }
+        .features-list li {
+            margin-bottom: 12px;
+            color: #555;
+        }
+        .features-list li::before {
+            content: "✓ ";
+            color: #28a745;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        .btn-select-plan {
+            display: block;
+            background: #23272e;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .pricing-card.featured .btn-select-plan {
+            background: #007bff;
+        }
+        .pricing-card.featured .btn-select-plan:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dev-container">
+        <header class="pricing-header">
+            <h1>باقات وأدوات المطورين 💻</h1>
+            <p>اختر الحزمة البرمجية أو الباقة المناسبة لتسريع بناء مشروعك القادم</p>
+        </header>
+
+        <main class="pricing-grid">
+            <section class="pricing-card">
+                <h3>حزمة الأدوات الأساسية</h3>
+                <p>مثالية للمطورين المستقلين والمشاريع الصغيرة</p>
+                <div class="price">29 $ <span style="font-size: 16px; font-weight: normal;">/ مرة واحدة</span></div>
+                <ul class="features-list">
+                    <li>وصول لأكثر من 15 مكون تفاعلي</li>
+                    <li>تحديثات مجانية لمدة 6 أشهر</li>
+                    <li>كود نظيف وموثق بالكامل</li>
+                    <li style="color: #ccc; text-decoration: line-through;">لا تشمل دعم فني خاص</li>
+                </ul>
+                <a href="checkout.html" class="btn-select-plan">شراء الحزمة الآن</a>
+            </section>
+
+            <section class="pricing-card featured">
+                <div class="badge">الأكثر طلباً 🔥</div>
+                <h3>الباقة الاحترافية (اشتراك)</h3>
+                <p>للشركات الناشئة والمطورين المحترفين</p>
+                <div class="price">79 $ <span style="font-size: 16px; font-weight: normal;">/ سنوياً</span></div>
+                <ul class="features-list">
+                    <li>وصول كامل لجميع المكونات والقوالب الحالية والمستقبلية</li>
+                    <li>تحديثات دورية مستمرة</li>
+                    <li>دعم فني مخصص عبر البريد و Discord</li>
+                    <li>رخصة استخدام تجاري مفتوح</li>
+                </ul>
+                <a href="checkout.html" class="btn-select-plan">اشترك الآن ووفر 30%</a>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
